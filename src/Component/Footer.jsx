@@ -20,10 +20,10 @@ const Footer = () => {
 
 		emailjs
 			.sendForm(
-				"service_yev8zd8",
-				"template_6xulcht",
+				"service_8syvs1u",
+				"template_ensx9bv",
 				form.current,
-				"1basqFKWSgsXJyEOu"
+				"Df4P3V3l3ID3r0Qza"
 			)
 			.then(
 				(result) => {
@@ -117,43 +117,46 @@ const Footer = () => {
 
 			</div>
 
-			<div className="md:w-1/3 ">
-				<h1 className="text-3xl font-bold my-5">Send me Email </h1>
-				<form ref={form} onSubmit={sendEmail}>
-					<div className="flex  overflow-hidden flex-col gap-10">
-						<input
+			<div className="md:w-1/3">
+  <h1 className="text-3xl font-bold my-5">Send me Email</h1>
 
-							type="text"
-							placeholder="Full Name"
-							required
-							name="from_name"
-							className="input input-bordered w-full max-w-sm border-[#61CE70]"
-						/>
-						<input
+  <form
+    ref={form}
+    onSubmit={sendEmail}
+    className="flex flex-col gap-6 bg-[#1f1f1f] p-6 rounded-lg shadow-md w-full max-w-md"
+  >
+    <input
+      type="text"
+      name="from_name"
+      placeholder="Your Name"
+      required
+      className="p-3 rounded-md border border-[#61CE70] bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-[#61CE70] transition duration-200"
+    />
+    <input
+      type="email"
+      name="from_email"
+      placeholder="Your Email"
+      required
+      className="p-3 rounded-md border border-[#61CE70] bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-[#61CE70] transition duration-200"
+    />
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      required
+      className="p-3 rounded-md border border-[#61CE70] bg-transparent text-white resize-none focus:outline-none focus:ring-2 focus:ring-[#61CE70] transition duration-200"
+    ></textarea>
+    <button
+      type="submit"
+      className="bg-[#61CE70] hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-md transition duration-200"
+    >
+      {sendBtnMessage}
+    </button>
+  </form>
 
-							type="email"
-							placeholder="Your Email"
-							name="from_email"
-							required
-							className="border-[#61CE70] input input-bordered w-full max-w-sm"
-						/>
-						<textarea
+  <ToastContainer className="mt-10" />
+</div>
 
-							className="textarea h-40 border-[#61CE70] textarea-bordered w-full max-w-sm"
-							name="message"
-							placeholder="Your message"
-						></textarea>
-						<button
-							type="submit"
-							className="btn max-w-sm  btn-primary bg-[#61CE70] hover:bg-[#61CE70] "
-						>
-							{" "}
-							{sendBtnMessage}
-						</button>
-					</div>
-				</form>{" "}
-				<ToastContainer className="mt-10" />
-			</div>
 		</div>
 	);
 };

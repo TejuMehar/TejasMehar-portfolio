@@ -41,11 +41,13 @@ const Nav = () => {
 
 			<div className="navbar px-20 justify-evenly lg:max-w-[1800px] w-full mx-auto hidden lg:flex bg-transparent ">
 				<div className="flex-1">
-					<a href="#home">
-						<img className="w-40 h-10" src={logo} alt="" />
-					</a>
-
-				</div>
+                    <a
+                   href="#home"
+                         className="block text-2xl md:text-3xl font-extrabold tracking-wide text-[#00A699] hover:text-[#00A699] transition-colors duration-300"
+                        >
+                     Tejas Mehar
+                     </a>
+               </div>
 
 				<div className="flex-none">
 					<ul className=" -translate-y-24 menu menu-horizontal text-[#61CE70] px-1">
@@ -102,7 +104,7 @@ const Nav = () => {
 					)}
 				</div>
 				<a href="#home">
-					<img className="h-12 w-40" src={logo} alt="Logo" />
+				  <h3> Tejas Mehar</h3>
 				</a>
 			</div>
 		</div>
